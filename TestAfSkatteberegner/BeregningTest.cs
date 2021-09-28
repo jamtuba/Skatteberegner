@@ -11,7 +11,7 @@ namespace TestAfSkatteberegner
         {
             Beregning beregning = new Beregning();
 
-            double skat = beregning.SkatVedJulegave(900, 0);
+            double skat = beregning.TaxByXmasGift(900, 0);
 
             Assert.Equal(0, skat);
         }
@@ -21,7 +21,7 @@ namespace TestAfSkatteberegner
         {
             Beregning beregning = new Beregning();
 
-            double skat = beregning.SkatVedJulegave(1200, 0);
+            double skat = beregning.TaxByXmasGift(1200, 0);
 
             Assert.Equal(0, skat);
         }
@@ -31,7 +31,7 @@ namespace TestAfSkatteberegner
         {
             Beregning beregning = new Beregning();
 
-            double skat = beregning.SkatVedJulegave(900, 300);
+            double skat = beregning.TaxByXmasGift(900, 300);
 
             Assert.Equal(0, skat);
         }
@@ -41,7 +41,7 @@ namespace TestAfSkatteberegner
         {
             Beregning beregning = new Beregning();
 
-            double skat = beregning.SkatVedJulegave(910, 300);
+            double skat = beregning.TaxByXmasGift(910, 300);
 
             Assert.Equal(1210, skat);
         }
@@ -51,7 +51,7 @@ namespace TestAfSkatteberegner
         {
             Beregning beregning = new Beregning();
 
-            double skat = beregning.SkatVedJulegave(900, 500);
+            double skat = beregning.TaxByXmasGift(900, 500);
 
             Assert.Equal(500, skat);
         }

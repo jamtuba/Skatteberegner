@@ -9,9 +9,15 @@ namespace Skatteberegner
     public class Beregning
     {
         // Funktionen returnerer det beløb, der skal beskattes (altså ikke selve skatten).
-        public double SkatVedJulegave(double julegave, double andenGave)
+        public double TaxByXmasGift(double xmasGift, double secondGift)
         {
-            return 0;
+            var xmasgiftAndMore = xmasGift + secondGift;
+            if (xmasGift <= 900 && xmasgiftAndMore <= 1200)
+                return 0;
+            else if (xmasGift > 900 && xmasgiftAndMore > 1200)
+                return xmasgiftAndMore;
+            else
+                return secondGift;
         }
     }
 }
